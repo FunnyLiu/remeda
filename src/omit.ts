@@ -36,7 +36,7 @@ export function omit<T extends {}, K extends keyof T>(
 export function omit() {
   return purry(_omit, arguments);
 }
-
+//过滤出对象中除了指定的其余项
 function _omit<T extends {}, K extends keyof T>(
   object: T,
   names: K[]

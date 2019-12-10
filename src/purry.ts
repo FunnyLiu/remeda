@@ -29,9 +29,11 @@
  * @category Function
  */
 export function purry(fn: any, args: IArguments | any[], lazy?: any) {
+  //判断参数是否一致从而确定是否有lazy参数
   const diff = fn.length - args.length;
   const arrayArgs = Array.from(args);
   if (diff === 0) {
+    //如果一致则调用传入的函数
     return fn(...arrayArgs);
   }
   if (diff === 1) {

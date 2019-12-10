@@ -43,18 +43,18 @@
 |  ├── last.ts
 |  ├── map.ts
 |  ├── mapKeys.ts
-|  ├── merge.ts
-|  ├── mergeAll.ts
-|  ├── noop.ts
+|  ├── merge.ts - 简单的merge两个对象
+|  ├── mergeAll.ts - 将多个对象值进行merge
+|  ├── noop.ts - 一个只返回undefined的函数
 |  ├── objOf.ts
-|  ├── omit.ts
-|  ├── once.ts
+|  ├── omit.ts - 过滤出对象中除了指定的其余项
+|  ├── once.ts - 使指定函数只能执行一次，通过闭包标识变量解决
 |  ├── pathOr.ts
-|  ├── pick.ts
+|  ├── pick.ts - 从对象中pick某些属性
 |  ├── pipe.ts
 |  ├── prop.ts
-|  ├── purry.ts
-|  ├── randomString.ts
+|  ├── purry.ts - 一个用来给其他函数包裹的底层函数，如果参数不一致就返回返回对象而不是函数执行结果
+|  ├── randomString.ts - 生成指定长度随机字符串
 |  ├── range.ts
 |  ├── reduce.ts
 |  ├── reject.ts
@@ -82,6 +82,16 @@
 
 ![img](./inner.svg)
   
+
+## 逐个文件分析
+
+### purry.ts
+
+一个用来给其他函数包裹的底层函数，封装了对lazy参数的处理，如果参数不一致就返回返回对象而不是函数执行结果
+
+### pick.ts
+
+从对象找那个pick某些属性
 
 
 Remeda
